@@ -193,6 +193,7 @@ def download(video_id):
         #transcript_text = download_subtitles(video_url)
 
 
+        print('proxy_server : ', proxy_server)
         transcript = YouTubeTranscriptApi.get_transcript(
             video_id, 
             languages = langlist, 
@@ -261,6 +262,7 @@ def process_video(video_id):
             print(transcript.language)
 
 
+        print('proxy_server : ', proxy_server)
         transcript = YouTubeTranscriptApi.get_transcript(
             video_id, 
             languages = langlist, 
