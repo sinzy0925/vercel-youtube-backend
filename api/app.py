@@ -19,11 +19,12 @@ from dotenv import load_dotenv
 #git
 
 # .envファイルを読み込む
-load_dotenv()
+load_dotenv()# .envファイルを指定
+api_key = os.getenv('API_KEY')# 環境変数からAPIキーを取得
 
-# 環境変数からプロキシとAPIキーを取得
-proxy_server = os.getenv('PROXY_SERVER')
-api_key = os.getenv('API_KEY')
+load_dotenv('.env.local')# .env.localファイルを指定
+proxy_server = os.getenv('PROXY_SERVER')# 環境変数からプロキシを取得
+
 
 
 app = Flask(__name__)
