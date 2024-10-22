@@ -24,6 +24,7 @@ api_key = os.getenv('API_KEY')# 環境変数からAPIキーを取得
 
 load_dotenv('.env.local')# .env.localファイルを指定
 proxy_server = os.getenv('PROXY_SERVER')# 環境変数からプロキシを取得
+print('proxy_server : ', proxy_server)
 
 
 
@@ -73,7 +74,7 @@ language_codes2 = [
     'he',  # ヘブライ語
     'no',  # ノルウェー語
     'sk',  # スロバキア語
-    'sl',  # スロベニア語
+    'sl',  # スロベニア語#
 ]
 
 @app.route("/")
